@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+
+
+    <style>
+        .scroll-nav {
+            font-size: 19px;
+            text-transform: uppercase;
+            font-weight: 508;
+            margin-left: 441px;
+            margin-top: 7px;
+        }
+        
+        .header {
+            position: sticky;
+            width: 100%;
+            background-color: white;
+            top: 0;
+            z-index: 999;
+            margin-top: -8px;
+            height: 12vh;
+        }
+        
+        .wrapper:hover .header {
+            box-shadow: 0 5px 10px rgba(71, 71, 71, .4);
+        }
+        
+        .scroll {
+            color: #00000085;
+            transition: all 0.7s;
+        }
+        
+        .scroll:hover {
+            color: red;
+        }
+        
+        .welcom-hero-form {
+            position: relative;
+            position: relative;
+            top: -602px;
+            background-color: white;
+            height: 71px;
+            margin-left: 448px;
+            border-radius: 3px;
+            margin-right: 442px;
+        }
+        
+        h2,
+        h3 {
+            font-weight: 550;
+            margin-bottom: 29px;
+            color: #000000ab;
+        }
+        
+        p {
+            text-transform: full-size-kana;
+            color: rgba(0, 0, 0, 0.331);
+            font-weight: 501;
+        }
+        
+        .search-bar {
+            height: 71px;
+            width: 176px;
+            margin-right: -113px;
+            position: relative;
+            left: 112px;
+        }
+        
+        .btn {
+            height: 70px;
+            width: 167px;
+        }
+        
+        .list-topics-content {
+            position: relative;
+            top: -98px;
+            z-index: 1;
+            display: flex;
+            margin-left: 45px;
+        }
+        
+        .single-list-topics-content {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            width: 205px;
+            height: 170px;
+            background: #fff;
+            border-radius: 3px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0px 16px rgba(71, 71, 71, .2);
+            transition: all 0.7s;
+        }
+        
+        .single-list-topics-content:hover {
+            color: #fff;
+            background: #ff545a;
+            box-shadow: 0 5px 10px rgba(71, 71, 71, .4);
+        }
+        
+        .single-list-topics-icon {
+            height: 80px;
+            width: 80px;
+        }
+        
+        .single-list-icon {
+            font-size: 57px;
+            padding: 10px;
+        }
+        
+        .section-header {
+            text-align: center;
+            color: #00000071;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 84px;
+        }
+        
+        .single-how-works {
+            text-align: center;
+            padding: 50px 42px;
+            border-radius: 3px;
+            box-shadow: 0 0px 5px rgba(71, 71, 71, .2);
+            margin-bottom: 30px;
+            transition: .3s linear;
+            height: 409px;
+            width: 368px;
+            margin-right: 63px;
+            transition: all 0.7s;
+        }
+        
+        .single-how-works:hover .works-icon {
+            color: red;
+        }
+        
+        .single-how-works:hover {
+            background-color: rgba(255, 0, 0, 0.819);
+        }
+        
+        .single-how-works:hover .single-how-works-icon {
+            background-color: white;
+        }
+        
+        .single-how-works-icon {
+            height: 90px;
+            width: 90px;
+            background-color: rgba(0, 0, 0, 0.078);
+            position: relative;
+            left: 95px;
+            ;
+        }
+        
+        .single-how-works:hover h3,
+        .single-how-works:hover p {
+            color: #fff;
+        }
+        
+        .single-how-works:hover .welcome-hero-btn {
+            background: #fff;
+            color: #ff545a;
+        }
+        
+        .works-icon {
+            font-size: 50px;
+            color: #000000a1;
+        }
+        
+        .welcome-hero-btn {
+            display: inline-block;
+            margin: 8px;
+            width: 113px;
+            height: 43px;
+            font-size: 15px;
+            background-color: white;
+            color: #000000d1;
+            border: 1px solid #d3d6d9;
+            border-radius: 3px;
+        }
+        
+        .works-content {
+            display: flex;
+        }
+        
+        .explore {
+            padding: 93px 0 96px;
+            background-color: #00000008;
+            height: 1521px;
+            margin-top: 83px;
+        }
+        
+        .explore-content {
+            height: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .single-how-explore {
+            height: 550px;
+            width: 372px;
+            background-color: white;
+            border-radius: 3px;
+            transition: .3s linear;
+            margin-left: 41px;
+            margin-bottom: 10px;
+            border: 1px solid #0003;
+        }
+        
+        .single-how-explore:hover {
+            box-shadow: 0 10px 20px rgba(21, 19, 19, .2);
+        }
+        
+        .single-how-explore-img {
+            height: 250px;
+            width: 370px;
+            border-radius: 3px 3px 0px 0px;
+        }
+        
+        .single-explore-text {
+            padding: 26px 25px 24px 15px;
+            padding: 26px 25px 24px 15px;
+            font-size: 19px;
+            font-weight: 510;
+        }
+        
+        .explore-rating-price {
+            height: 26px;
+            font-size: 15px;
+            color: #000000b5;
+            margin: 12px;
+            margin-top: -12px;
+            border-radius: 4px;
+            display: flex;
+        }
+        
+        .explore-rating {
+            width: 32px;
+            height: 22px;
+            color: #fff;
+            text-align: center;
+            border-radius: 3px;
+            margin-right: 10px;
+            background-color: #0070ffd6
+        }
+        
+        .explore-price-box {
+            display: inline-block;
+            padding: 0 10px;
+            margin: 0 8px;
+            border-left: 1px solid #dde0e4;
+            border-right: 1px solid #dde0e4;
+        }
+        
+        .explore-person-icon {
+            height: 120px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.326);
+            margin-left: 20px;
+            margin-right: 20px;
+            display: flex;
+        }
+        
+        .person-icon {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin-top: 10px;
+        }
+        
+        .explore-person-text {
+            margin-left: 20px;
+            color: rgba(0, 0, 0, 0.499);
+        }
+        
+        .explore-close {
+            padding: 20px;
+        }
+        
+        .explore-close-button {
+            color: rgba(255, 0, 0, 0.757);
+        }
+        
+        .explore-close-icons {
+            margin-left: 131px;
+            color: #000000ab;
+        }
+        
+        .explore-icon {
+            margin: 0px 32px 0px 32px;
+        }
+        
+        .reviews {
+            padding: 100px 0px;
+        }
+        
+        .reviews-cards {
+            height: 312px;
+            background-color: white;
+            border-radius: 4px;
+            border: 1px solid #00000036;
+            margin-right: 6px;
+            transition: .3s linear;
+        }
+        
+        .reviews-cards:hover {
+            box-shadow: 0 10px 40px rgba(21, 19, 19, 0.276);
+        }
+        
+        .reviews-cards-icon {
+            position: relative;
+            top: 52px;
+            left: 27px;
+            margin-right: 44px;
+            height: 91px;
+            margin-top: 35px;
+        }
+        
+        .reviews-cards-person-icon {
+            border-radius: 50%;
+            height: 60px;
+            width: 60px;
+            position: relative;
+            bottom: -32px;
+            left: 38px;
+        }
+        
+        .reviews-cards-content {
+            margin-left: 115px;
+            margin-top: -50px;
+        }
+        
+        .reviews-content {
+            display: flex;
+        }
+        
+        .reviews-stars {
+            color: #ffb300;
+        }
+        
+        .reviews-text p {
+            margin-left: 20px;
+            margin-right: 15px;
+            margin-top: 30px;
+            color: rgba(0, 0, 0, 0.502);
+        }
+        
+        .statics {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: url(https://img.freepik.com/free-photo/shiraito-waterfall-autumn-japan_335224-193.jpg?w=1380&t=st=1702464604~exp=1702465204~hmac=3521b4d67d2b849033266d0a69953762c2a572ec051c316be8ee86810b250082)no-repeat fixed;
+            background-position-x: 0%;
+            background-position-y: 0%;
+            background-size: auto;
+            background-position: center;
+            background-size: cover;
+            /* padding: 90px 0 120px; */
+            height: 34vh;
+        }
+        
+        .statics-counter {
+            display: flex;
+            margin-left: 130px;
+        }
+        
+        .statics-clients {
+            font-size: 70px;
+            font-weight: 500;
+            color: white;
+        }
+        
+        .single-statics-content {
+            color: rgb(255, 255, 255);
+            font-size: 62px;
+            font-weight: 501;
+            transition: all 0.9s ease-in-out;
+            display: flex;
+        }
+        
+        .statics-box h3 {
+            position: absolute;
+            color: white;
+            font-size: 25px;
+        }
+        
+        .counter {
+            margin-right: 15px;
+        }
+        
+        .blog {
+            padding: 120px 0 90px;
+        }
+        
+        .blog-header-text {
+            text-align: center;
+            color: #00000071;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 84px;
+        }
+        
+        .blog-header {
+            display: flex;
+            margin-left: 112px;
+        }
+        
+        .blog-cards {
+            height: 440px;
+            width: 350px;
+            border: 1px solid #00000021;
+            border-radius: 3px;
+            margin-right: 20px;
+        }
+        
+        .blog-cards:hover {
+            box-shadow: 0 10px 40px rgba(21, 19, 19, 0.276);
+        }
+        
+        .blog-card-text h5 {
+            margin-left: 20px;
+            margin-top: 10px;
+            font-weight: 503;
+            font-size: 18px;
+        }
+        
+        .blog-cards:hover .blog-card-text {
+            color: red;
+        }
+        
+        .blog-place-img {
+            height: 200px;
+            width: 350px;
+            border-radius: 3px 3px 0px 0px;
+        }
+        
+        .blog-card-date {
+            display: flex;
+            margin-left: 20px;
+        }
+        
+        .blog-card-admin {
+            font-weight: 503;
+            padding-left: 8px;
+            padding-right: 28px;
+            border-right: 1px solid #0000006e;
+            height: 29px;
+        }
+        
+        .blog-date {
+            margin-left: 20px;
+        }
+        
+        .blog-card-lower-text p {
+            margin-left: 20px;
+            line-height: 30px;
+            color: rgba(0, 0, 0, 0.426);
+        }
+        
+        .carousel-inner {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 0px 6px 16px 1px rgba(21, 19, 19, 0.276);
+            height: 276px;
+            border: 1px solid #00000026;
+            margin-bottom: 20px;
+            margin-top: 29px;
+        }
+        
+        .subscription {
+            background-color: #0000000a;
+            padding: 88px;
+            text-transform: uppercase;
+        }
+        
+        .subscribe-title {
+            color: rgba(0, 0, 0, 0.278);
+            font-size: 19px;
+            font-weight: 510;
+        }
+        
+        .owl-item .item {
+            transform: translate3d(0, 0, 0);
+            /* DO NOT REMEMBER WHERE TU PUT THIS, SEARCH FOR 3D ACCELERATION */
+            /* // transform: scale(0.9); */
+            /* // transition: all .25s ease-in-out;  */
+            margin: 50px 0;
+            /* OVERWRITE PLUGIN MARGIN */
+        }
+        
+        .screenshot_slider .owl-item .item {
+            -webkit-transition: 0.3s;
+            -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+            -o-transition: 0.3s;
+            transition: 0.3s;
+            -webkit-transform: scale(0.80);
+            -ms-transform: scale(0.80);
+            transform: scale(0.80);
+        }
+        
+        .screenshot_slider .owl-item.center .item {
+            -webkit-transform: scale(1.15);
+            -ms-transform: scale(1.15);
+            transform: scale(1.15);
+        }
+        
+        .screenshot_slider .owl-nav {
+            text-align: center;
+            /* // margin: 40px 0; */
+        }
+        
+        .screenshot_slider .owl-nav button {
+            font-size: 24px !important;
+            margin: 10px;
+            color: #033aff !important;
+        }
+        
+        .item {
+            background-color: white;
+            height: 309px;
+            border: 1px solid #00000016;
+        }
+        
+        .person-details {
+            position: relative;
+            left: 143px;
+            top: -26px;
+            font-size: 22px;
+            width: 159px;
+        }
+        
+        .person-city {
+            font-size: 18px;
+        }
+        
+        .person-stars {
+            color: rgb(255, 174, 0);
+            font-size: 15px;
+            position: relative;
+            top: -21px;
+        }
+        
+        .owl-carousel .owl-item img {
+            display: block;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            position: relative;
+            top: 60px;
+            left: 55px;
+        }
+        
+        .person-comment {
+            margin-left: 21px;
+            margin-right: 11px;
+            margin-top: -22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid p-2 border-bottom">
+                <div class="d-flex justify-content-start ">
+                    <div class="row p-2 ">
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav bg-secondary-subtle text-secondary ">
+                                <li class="nav-item dropdown"><span class="dropdown-toggle" data-bs-toggle="dropdown">Euro </span>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item">EN</a></li>
+                                        <li><a class="dropdown-item">APs</a></li>
+                                        <li><a class="dropdown-item">SMp</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                        <ul class="navbar-nav bg-secondary-subtle text-secondary  ">
+                            <li class="nav-item dropdown"><span class="dropdown-toggle p-2" data-bs-toggle="dropdown">EN </span>
+                                <ul class="dropdown-menu ">
+                                    <li>
+                                        <option class="dropdown-item" href="#">EN</option>
+                                    </li>
+                                    <li>
+                                        <option class="dropdown-item" href="#">APs</option>
+                                    </li>
+                                    <li>
+                                        <option class="dropdown-item" href="#">SMp</option>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><span class="icon p-2" style="border-right: 1px solid rgba(0, 0, 0, 0.168);"><i class="fa fa-search" aria-hidden="true"></i></span></div>
+                <div class="header-top-right text-secondary "><span class="contect p-3 ">546897358786</span><span class="signin p-3">Singn_In</span><span class="register p-3">Register</span></div>
+            </div>
+        </nav>
+
+        <section id="header" class="header">
+            <div class="container d-flex">
+                <div class="header-text d-flex p-3">
+                    <h2>List</h2>
+                    <h2 class="text-danger">Race </h2>
+                </div>
+                <span class="scroll-nav d-flex">
+            <span class="scroll p-3 text-danger">Home</span>
+                <span class="scroll p-3">how it is work</span>
+                <span class="scroll p-3">Explore</span>
+                <span class="scroll p-3">Reviews</span>
+                <span class="scroll p-3">Blog</span>
+                <span class="scroll p-3">Contact</span></span>
+            </div>
+        </section>
+
+        <div class="header-img-nav" style="height: 824px;">
+            <div class="header-bg-img">
+                <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8fA%3D%3D " width="100%" style="height: 810px;">
+
+                <div class="header-img-text" style="position: relative; 
+                top: -700px;
+                color: azure;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 800;">
+                    <h1 class="animated fadeInUp" style="font-size: 49px; font-weight: 700; line-height: 74px;">best place to find and Explore<br> that all you need</h1>
+                    <p style="margin-top: 60px;
+                font-size: 20px;
+                font-weight: 501;
+                color: white;">Find Best Place, Resturant, Hotel, Real State and many more think in just One click</p>
+                </div>
+
+                <div class="welcom-hero-form d-flex">
+                    <div class="single-welcom-hero-form p-xl-4 d-flex">
+                        <h2 style="font-size:22px; color: black;">What?</h2>
+                        <span style="position: relative;
+                            right: -12px;
+                            font-weight: 502;
+                            color: #00000063;">Ex: Place, Retaurant, Hotel, Food, Automation</span>
+                        <span class="logo" style="margin-left: 40px;
+                            font-size: 26px;
+                            margin-top: -7px;"><i class="fa fa-list-ul" aria-hidden="true"></i>
+                            </span>
+                    </div>
+                    <div class="single-welcom-hero-form p-xl-4 d-flex" style="border-left: 1px solid #0000006b;">
+                        <h2 style="font-size:22px; color: black;">Location</h2>
+                        <span style="position: relative;
+                            right: -12px;
+                            font-weight: 502;
+                            color: #00000068;">Ex: London, Newyork, Rome</span>
+                        <span class="logo" style="margin-left: 80px;
+                            font-size: 26px;
+                            margin-top: -7px;
+                            position: relative;
+                            left: 70px;;"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                            </span>
+                    </div>
+                    <div class="search-bar"> <button type="button" class="btn btn-danger btn-lg">search<i class="fa fa-search m-3" aria-hidden="true"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="list-topics" class="list-topics">
+            <div class="container">
+                <div class="list-topics-content ">
+
+                    <div class="single-list-topics-content">
+                        <div class="single-list-topics-icon"><span class="single-list-icon"><i class="fa fa-cutlery" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="single-list-uper-text pt-2">
+                            <h5><dt>Restaurant </dt></h5>
+
+
+                        </div>
+                        <dd>150 listings</dd>
+                    </div>
+
+                    <div class="single-list-topics-content">
+                        <div class="single-list-topics-icon"><span class="single-list-icon"><i class="fa fa-plane" aria-hidden="true"></i>
+                    </span>
+                        </div>
+                        <div class="single-list-uper-text pt-2">
+                            <h5><dt>Destination</dt></h5>
+
+                        </div>
+                        <dd>127 listings</dd>
+                    </div>
+
+
+                    <div class="single-list-topics-content">
+                        <div class="single-list-topics-icon"><span class="single-list-icon"><i class="fa fa-bed" aria-hidden="true"></i>
+                    </span>
+                        </div>
+                        <div class="single-list-uper-text pt-2">
+                            <h5><dt>Hotel</dt></h5>
+
+                        </div>
+                        <dd>190 listings</dd>
+                    </div>
+
+
+                    <div class="single-list-topics-content">
+                        <div class="single-list-topics-icon"><span class="single-list-icon"><i class="fa fa-medkit" aria-hidden="true"></i>
+                    </span>
+                        </div>
+                        <div class="single-list-uper-text pt-2">
+                            <h5><dt>Healthcare</dt></h5>
+
+                        </div>
+                        <dd>110 listings</dd>
+                    </div>
+
+
+                    <div class="single-list-topics-content">
+                        <div class="single-list-topics-icon"><span class="single-list-icon"><i class="fa fa-car" aria-hidden="true"></i>
+                    </span>
+                        </div>
+                        <div class="single-list-uper-text pt-2">
+                            <h5><dt>Automation</dt></h5>
+
+                        </div>
+                        <dd>127 listings</dd>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="works">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="text-uppercase">How It Works</h2>
+                    <p>Learn more about how our Website works</p>
+                </div>
+                <div class="works-content mt-3">
+                    <div class="single-how-works">
+                        <div class="single-how-works-icon rounded-circle mb-4"><span class="works-icon"><i class="fa fa-lightbulb-o" aria-hidden="true"></span></i>
+                        </div>
+                        <h3 class="mb-3">Choose What To Do</h3>
+                        <p style="line-height: 2;">Lorem ipsum dolor, reprehenderit reiciendis consequ fuga at porro. Ad, voluptatem! Minima, aperiam similiqu</p>
+                        <button class="welcome-hero-btn">Learn more</button> </div>
+                    <div class="single-how-works">
+                        <div class="single-how-works-icon rounded-circle mb-4"><span class="works-icon"><i class="fa fa-car" aria-hidden="true"></i>
+                    </span>
+                        </div>
+                        <h3 class="mb-3 ">Find what you want</h3>
+                        <p style="line-height: 2;">Lorem ipsum dolor, reprehenderit reiciendis consequ fuga at porro. Ad, voluptatem! Minima, aperiam similiqu</p>
+                        <button class="welcome-hero-btn">Learn more</button> </div>
+
+                    <div class="single-how-works">
+                        <div class="single-how-works-icon rounded-circle mb-4"><span class="works-icon"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </span>
+                        </div>
+                        <h3 class="mb-3">Explore amazing Place</h3>
+                        <p style="line-height: 2;">Lorem ipsum dolor, reprehenderit reiciendis consequ fuga at porro. Ad, voluptatem! Minima, aperiam similiqu</p>
+                        <button class="welcome-hero-btn">Learn more</button> </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="explore" class="explore">
+            <div class="container">
+                <div class="section-header">
+                    <h2>EXPLORE</h2>
+                    <p>Explore new place, food, culture around the world and many more</p>
+                </div>
+                <div class="explore-content">
+                    <div class="single-how-explore">
+
+                        <img class="single-how-explore-img " src="https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2020/07/Buying-a-House-with-Swimming-Pool-A-21-07-1024x640.jpg "></img>
+
+                        <h3 class="single-explore-text">Banglow with swiming pool</h3>
+
+                        <div class="explore-rating-price">
+                            <span class="explore-rating">5.0</span>
+                            <p>10 Ratings</p>
+                            <span class="explore-price-box">from<span class="text-danger p-1">5$-500$</span></span>
+                            <p>Restaurant</p>
+                        </div>
+                        <div class="explore-person-icon">
+                            <img class="person-icon" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"></img>
+                            <span class="explore-person-text"><p>Lorem ipsum dolor sit amet conse adipisicing elit. Eum qui, perspiciatis aliquam quaerat minus iure ....</p></span>
+                        </div>
+                        <div class="explore-close">
+                            <span class="explore-close-button">close now</span>
+                            <span class="explore-close-icons"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <i  class="fa fa-upload explore-icon" aria-hidden="true"></i>
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </span></div>
+                    </div>
+                    <div class="single-how-explore">
+
+                        <img class="single-how-explore-img " src="https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2020/07/Buying-a-House-with-Swimming-Pool-A-21-07-1024x640.jpg "></img>
+
+                        <h3 class="single-explore-text">Banglow with swiming pool</h3>
+
+                        <div class="explore-rating-price">
+                            <span class="explore-rating">5.0</span>
+                            <p>10 Ratings</p>
+                            <span class="explore-price-box">from<span class="text-danger p-1">5$-500$</span></span>
+                            <p>Restaurant</p>
+                        </div>
+                        <div class="explore-person-icon">
+                            <img class="person-icon" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"></img>
+                            <span class="explore-person-text"><p>Lorem ipsum dolor sit amet conse adipisicing elit. Eum qui, perspiciatis aliquam quaerat minus iure ....</p></span>
+                        </div>
+                        <div class="explore-close">
+                            <span class="explore-close-button">close now</span>
+                            <span class="explore-close-icons"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <i  class="fa fa-upload explore-icon" aria-hidden="true"></i>
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </span></div>
+                    </div>
+                    <div class="single-how-explore">
+
+                        <img class="single-how-explore-img " src="https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2020/07/Buying-a-House-with-Swimming-Pool-A-21-07-1024x640.jpg "></img>
+
+                        <h3 class="single-explore-text">Banglow with swiming pool</h3>
+
+                        <div class="explore-rating-price">
+                            <span class="explore-rating">5.0</span>
+                            <p>10 Ratings</p>
+                            <span class="explore-price-box">from<span class="text-danger p-1">5$-500$</span></span>
+                            <p>Restaurant</p>
+                        </div>
+                        <div class="explore-person-icon">
+                            <img class="person-icon" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"></img>
+                            <span class="explore-person-text"><p>Lorem ipsum dolor sit amet conse adipisicing elit. Eum qui, perspiciatis aliquam quaerat minus iure ....</p></span>
+                        </div>
+                        <div class="explore-close">
+                            <span class="explore-close-button">close now</span>
+                            <span class="explore-close-icons"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <i  class="fa fa-upload explore-icon" aria-hidden="true"></i>
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </span></div>
+                    </div>
+                    <div class="single-how-explore">
+
+                        <img class="single-how-explore-img " src="https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2020/07/Buying-a-House-with-Swimming-Pool-A-21-07-1024x640.jpg "></img>
+
+                        <h3 class="single-explore-text">Banglow with swiming pool</h3>
+
+                        <div class="explore-rating-price">
+                            <span class="explore-rating">5.0</span>
+                            <p>10 Ratings</p>
+                            <span class="explore-price-box">from<span class="text-danger p-1">5$-500$</span></span>
+                            <p>Restaurant</p>
+                        </div>
+                        <div class="explore-person-icon">
+                            <img class="person-icon" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"></img>
+                            <span class="explore-person-text"><p>Lorem ipsum dolor sit amet conse adipisicing elit. Eum qui, perspiciatis aliquam quaerat minus iure ....</p></span>
+                        </div>
+                        <div class="explore-close">
+                            <span class="explore-close-button">close now</span>
+                            <span class="explore-close-icons"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <i  class="fa fa-upload explore-icon" aria-hidden="true"></i>
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </span></div>
+                    </div>
+                    <div class="single-how-explore">
+
+                        <img class="single-how-explore-img " src="https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2020/07/Buying-a-House-with-Swimming-Pool-A-21-07-1024x640.jpg "></img>
+
+                        <h3 class="single-explore-text">Banglow with swiming pool</h3>
+
+                        <div class="explore-rating-price">
+                            <span class="explore-rating">5.0</span>
+                            <p>10 Ratings</p>
+                            <span class="explore-price-box">from<span class="text-danger p-1">5$-500$</span></span>
+                            <p>Restaurant</p>
+                        </div>
+                        <div class="explore-person-icon">
+                            <img class="person-icon" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"></img>
+                            <span class="explore-person-text"><p>Lorem ipsum dolor sit amet conse adipisicing elit. Eum qui, perspiciatis aliquam quaerat minus iure ....</p></span>
+                        </div>
+                        <div class="explore-close">
+                            <span class="explore-close-button">close now</span>
+                            <span class="explore-close-icons"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <i  class="fa fa-upload explore-icon" aria-hidden="true"></i>
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </span></div>
+                    </div>
+                    <div class="single-how-explore">
+
+                        <img class="single-how-explore-img " src="https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2020/07/Buying-a-House-with-Swimming-Pool-A-21-07-1024x640.jpg "></img>
+
+                        <h3 class="single-explore-text">Banglow with swiming pool</h3>
+
+                        <div class="explore-rating-price">
+                            <span class="explore-rating">5.0</span>
+                            <p>10 Ratings</p>
+                            <span class="explore-price-box">from<span class="text-danger p-1">5$-500$</span></span>
+                            <p>Restaurant</p>
+                        </div>
+                        <div class="explore-person-icon">
+                            <img class="person-icon" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"></img>
+                            <span class="explore-person-text"><p>Lorem ipsum dolor sit amet conse adipisicing elit. Eum qui, perspiciatis aliquam quaerat minus iure ....</p></span>
+                        </div>
+                        <div class="explore-close">
+                            <span class="explore-close-button">close now</span>
+                            <span class="explore-close-icons"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <i  class="fa fa-upload explore-icon" aria-hidden="true"></i>
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </span></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews">
+            <div class="section-header">
+                <h2>CLIENTS REVIEWS</h2>
+                <p>What your client say about us</p>
+            </div>
+            <div class="container-fluid">
+                <div class="section-padding">
+                    <div class="screenshot_slider owl-carousel">
+                        <div class="item">
+                            <div class="reviews-img">
+                                <img class="reviews-img-person" src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt=" " title=" ">
+
+                            </div>
+                            <div class="person-details">
+                                <dt class="person-name">Tom Stark
+                                    </dt>
+                                <p class="person-city">Uk, London</p>
+                                <span class="person-stars"><i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </span></div>
+                            <div class="person-comment">
+                                <p>Lorem ipsum, dolor sit a veritatis maiores dolorem possimus placeat natus aliquid deleniti, fugiat voluptatum ea enim perspiciatis veniam asperiores tenetur dignissimos?</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="reviews-img">
+                                <img class="reviews-img-person" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg" alt=" " title=" ">
+
+                            </div>
+                            <div class="person-details">
+                                <dt class="person-name">tommy Stark
+                                    </dt>
+                                <p class="person-city">Uk, London</p>
+                                <span class="person-stars"><i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </span></div>
+                            <div class="person-comment">
+                                <p>Lorem ipsum, dolor sit a veritatis maiores dolorem possimus placeat natus aliquid deleniti, fugiat voluptatum ea enim perspiciatis veniam asperiores tenetur dignissimos?</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="reviews-img">
+                                <img class="reviews-img-person" src="https://image.shutterstock.com/image-photo/portrait-handsome-caucasian-man-formal-260nw-2142820441.jpg" alt=" " title=" ">
+
+                            </div>
+                            <div class="person-details">
+                                <dt class="person-name">jed Stok
+                                    </dt>
+                                <p class="person-city">Uk, London</p>
+                                <span class="person-stars"><i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </span></div>
+                            <div class="person-comment">
+                                <p>Lorem ipsum, dolor sit a veritatis maiores dolorem possimus placeat natus aliquid deleniti, fugiat voluptatum ea enim perspiciatis veniam asperiores tenetur dignissimos?</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="reviews-img">
+                                <img class="reviews-img-person" src="https://images.unsplash.com/photo-1585846416120-3a7354ed7d39?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2Zlc3Npb25hbCUyMG1hbnxlbnwwfHwwfHx8MA%3D%3D" alt=" " title=" ">
+
+                            </div>
+                            <div class="person-details">
+                                <dt class="person-name">leon karck
+                                    </dt>
+                                <p class="person-city">Uk, London</p>
+                                <span class="person-stars"><i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </span></div>
+                            <div class="person-comment">
+                                <p>Lorem ipsum, dolor sit a veritatis maiores dolorem possimus placeat natus aliquid deleniti, fugiat voluptatum ea enim perspiciatis veniam asperiores tenetur dignissimos?</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="reviews-img">
+                                <img class="reviews-img-person" src="https://img.freepik.com/free-photo/proud-young-executive-ready-start_1139-303.jpg" alt=" " title=" ">
+
+                            </div>
+                            <div class="person-details">
+                                <dt class="person-name">holk Stark
+                                    </dt>
+                                <p class="person-city">Uk, London</p>
+                                <span class="person-stars"><i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </span></div>
+                            <div class="person-comment">
+                                <p>Lorem ipsum, dolor sit a veritatis maiores dolorem possimus placeat natus aliquid deleniti, fugiat voluptatum ea enim perspiciatis veniam asperiores tenetur dignissimos?</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="reviews-img">
+                                <img class="reviews-img-person" src="https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" alt=" " title=" ">
+
+                            </div>
+                            <div class="person-details">
+                                <dt class="person-name">mady ston
+                                    </dt>
+                                <p class="person-city">Uk, London</p>
+                                <span class="person-stars"><i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </span></div>
+                            <div class="person-comment">
+                                <p>Lorem ipsum, dolor sit a veritatis maiores dolorem possimus placeat natus aliquid deleniti, fugiat voluptatum ea enim perspiciatis veniam asperiores tenetur dignissimos?</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="reviews-img">
+                                <img class="reviews-img-person" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa4xjShh4ynJbrgYrW_aB4lhKSxeMzQ3cO_A&usqp=CAU" alt=" " title=" ">
+
+                            </div>
+                            <div class="person-details">
+                                <dt class="person-name">danny mark
+                                    </dt>
+                                <p class="person-city">Uk, London</p>
+                                <span class="person-stars"><i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </span></div>
+                            <div class="person-comment">
+                                <p>Lorem ipsum, dolor sit a veritatis maiores dolorem possimus placeat natus aliquid deleniti, fugiat voluptatum ea enim perspiciatis veniam asperiores tenetur dignissimos?</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="statics " class="statics ">
+            <div class="container ">
+                <div class="statics-counter ">
+                    <div class="statics-box m-5 ">
+
+                        <div class="single-statics-content ">
+                            <div class="counter ">90</div>
+                            <span>K+</span>
+                        </div>
+                        <h3>Listings</h3>
+                    </div>
+                    <div class="statics-box m-5 ">
+                        <div class="single-statics-content ">
+                            <div class="counter ">40</div>
+                            <span>K+</span>
+                        </div>
+                        <h3>Listing categories</h3>
+                    </div>
+                    <div class="statics-box m-5 ">
+                        <div class="single-statics-content ">
+                            <div class="counter ">50</div>
+                            <span>K+</span>
+                        </div>
+                        <h3>Visitors</h3>
+                    </div>
+                    <div class="statics-box m-5 ">
+                        <div class="single-statics-content ">
+                            <div class="counter ">45</div>
+                            <span>K+</span>
+                        </div>
+                        <h3>Happy clients</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id=" blog " class="blog ">
+            <div class="container ">
+
+                <div class="blog-header-text ">
+                    <h2>NEWS AND ARTICALS</h2>
+                    <p>Always up to date with our latest news and articals</p>
+                </div>
+
+                <div class="blog-header ">
+                    <div class="blog-cards ">
+                        <div class="blog-cards-img "><img class="blog-place-img " src="https://img.freepik.com/free-photo/old-rusty-fishing-boat-slope-along-shore-lake_181624-44902.jpg?w=1380&t=st=1702468573~exp=1702469173~hmac=cb96156076c874aa2331ff30a7bef3c8800303cef5df3e14b5d23b39365560b5 "></div>
+                        <div class="blog-card-text ">
+                            <h5>How to find your Desired Place more quickly</h5>
+                        </div>
+                        <div class="blog-card-date ">
+                            <p>posted By</p>
+                            <span class="blog-card-admin ">ADMIN</span>
+                            <span class="blog-date ">March 2018</span></div>
+                        <span class="blog-card-lower-text ">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, magnam cum dolorem voluptas neque sint ea cupiditate inventore incm.</p>
+               </span>
+                    </div>
+                    <div class="blog-cards ">
+                        <div class="blog-cards-img "><img class="blog-place-img " src="https://img.freepik.com/free-photo/old-rusty-fishing-boat-slope-along-shore-lake_181624-44902.jpg?w=1380&t=st=1702468573~exp=1702469173~hmac=cb96156076c874aa2331ff30a7bef3c8800303cef5df3e14b5d23b39365560b5 "></div>
+                        <div class="blog-card-text ">
+                            <h5>How to find your Desired Place more quickly</h5>
+                        </div>
+                        <div class="blog-card-date ">
+                            <p>posted By</p>
+                            <span class="blog-card-admin ">ADMIN</span>
+                            <span class="blog-date ">March 2018</span></div>
+                        <span class="blog-card-lower-text ">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, magnam cum dolorem voluptas neque sint ea cupiditate inventore incm.</p>
+               </span>
+                    </div>
+                    <div class="blog-cards ">
+                        <div class="blog-cards-img "><img class="blog-place-img " src="https://img.freepik.com/free-photo/old-rusty-fishing-boat-slope-along-shore-lake_181624-44902.jpg?w=1380&t=st=1702468573~exp=1702469173~hmac=cb96156076c874aa2331ff30a7bef3c8800303cef5df3e14b5d23b39365560b5 "></div>
+                        <div class="blog-card-text ">
+                            <h5>How to find your Desired Place more quickly</h5>
+                        </div>
+                        <div class="blog-card-date ">
+                            <p>posted By</p>
+                            <span class="blog-card-admin ">ADMIN</span>
+                            <span class="blog-date ">March 2018</span></div>
+                        <span class="blog-card-lower-text ">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, magnam cum dolorem voluptas neque sint ea cupiditate inventore incm.</p>
+               </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact " class="subscription ">
+            <div class="container ">
+                <div class="subscribe-title text-center ">
+                    <h2>do you want to add your business listing with us?</h2>
+                    <p>Listrace offer you to list your business with us and we very much able to promote your Business.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js ">
+    </script>
+    <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+    <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js "></script>
+    <script>
+        $('.screenshot_slider').owlCarousel({
+            loop: true,
+            responsiveClass: true,
+            nav: true,
+            margin: 0,
+            autoplayTimeout: 4000,
+            smartSpeed: 400,
+            center: true,
+            navText: ['&#8592;', '&#8594;'],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 5
+                },
+                1200: {
+                    items: 5
+                }
+            }
+        });
+
+        $('.counter').each(function() {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 1000,
+                easing: 'swing',
+                step: function(now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+</html>
+
+</html>
+
+</html>
